@@ -86,19 +86,21 @@
 // Напишіть функцію, яка приймає масив об'єктів і шукає користувача за ім'ям
 //чи іншою властивістю.
 
-const users = [
-  { name: 'John', age: 25, country: 'USA', occupation: 'Developer' },
-  { name: 'Yulia', age: 34, country: 'Ukraine', occupation: 'Developer' },
-  { name: 'Kos', age: 39, country: 'Ukraine', occupation: 'Developer' }
-];
+// const users = [
+//   { name: 'John', age: 25, country: 'USA', occupation: 'Developer' },
+//   { name: 'Yulia', age: 34, country: 'Ukraine', occupation: 'Developer' },
+//   { name: 'Kos', age: 39, country: 'Ukraine', occupation: 'Developer' }
+// ];
 
-function foo(users) {
+// function foo(users) {
     
-}
+// }
 
 // Метод map для об'єкта:
-// Створіть метод об'єкта, який використовує подібний до map метод для 
+// Створіть метод об'єкта, який використовує подібний до map метод для
 //перетворення значень властивостей об'єкта.
+
+
 
 // Метод filter для об'єкта:
 // Створіть метод об'єкта, який використовує подібний до filter метод для 
