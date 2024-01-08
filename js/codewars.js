@@ -63,3 +63,34 @@
 // }
 
 // accum("ZpglnRxqenU") //"Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu"
+
+
+// 5.
+
+// function add(n) {
+
+//     return function Nunmb(k) {
+//         return n + k;
+//     }
+
+// }
+
+// 6.
+
+
+// function averages(numbers) {
+//     const averagesNumbArr = [];
+//         if (numbers.length === 0 || numbers.length === 1) {
+//             return averagesNumbArr;
+//         } else {
+//             for (let i = 0; i < numbers.length-1; i++) {
+//                 const averagesNumb = (numbers[i] +numbers[i+1])/2;
+//                 averagesNumbArr.push(averagesNumb)
+//                 }                
+//     }
+//     console.log(averagesNumbArr);
+//         return averagesNumbArr;
+// }
+
+
+// averages([1, 3, 5, 1, -10]) //[2, 4, 3, -4.5]
