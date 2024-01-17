@@ -86,7 +86,7 @@
 //             for (let i = 0; i < numbers.length-1; i++) {
 //                 const averagesNumb = (numbers[i] +numbers[i+1])/2;
 //                 averagesNumbArr.push(averagesNumb)
-//                 }                
+//                 }
 //     }
 //     console.log(averagesNumbArr);
 //         return averagesNumbArr;
@@ -94,3 +94,20 @@
 
 
 // averages([1, 3, 5, 1, -10]) //[2, 4, 3, -4.5]
+
+// 7.
+
+// function getSize(width, height, depth){
+//   const arr=[];
+//   const area = 2*(width*height +height*depth +width*depth);
+//     const volume = width * height * depth;
+//     arr.push(area,volume);
+//     return arr;
+// }
+
+// getSize(4, 2, 6) /// [88, 48]);
+
+// 8.
+function cockroachSpeed(s) {
+  
+}
