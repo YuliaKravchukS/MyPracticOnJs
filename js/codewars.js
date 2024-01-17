@@ -105,9 +105,26 @@
 //     return arr;
 // }
 
-// getSize(4, 2, 6) /// [88, 48]);
+// getSize(4, 2, 6) /// [88, 48];
 
 // 8.
-function cockroachSpeed(s) {
-  
+function pairZeros(arr) {
+    // const arrPairZeros = [];
+    // for (let i = 0; i < arr.length; i++) {
+    //     if(arr[i]===0)
+        
+    // }
+    // 
+
+    let arrPairZeros = arr.reduce((result, item) => {
+    //     if (result.includes("0")) {
+    //         return result;
+    //     }
+    //     [...result, item];
+        
+        
+        
+    // }, []);
+    // console.log(arrPairZeros);
 }
+pairZeros([1,0,1,0,2,0,0,3,0]) // [1,0,1,2,0,3,0]
