@@ -108,23 +108,54 @@
 // getSize(4, 2, 6) /// [88, 48];
 
 // 8.
-function pairZeros(arr) {
-    // const arrPairZeros = [];
-    // for (let i = 0; i < arr.length; i++) {
-    //     if(arr[i]===0)
-        
-    // }
-    // 
+// function removeDuplicateWords(s) {
+//     const arr = s.split(' ').filter((el, idx, arr) => { return s.split(' ').indexOf(el) === idx });
+//     return arr.join(' ');
+// }
 
-    let arrPairZeros = arr.reduce((result, item) => {
-    //     if (result.includes("0")) {
-    //         return result;
-    //     }
-    //     [...result, item];
-        
-        
-        
-    // }, []);
-    // console.log(arrPairZeros);
+// removeDuplicateWords('alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta') //'alpha beta gamma delta'
+
+
+// 9.
+
+// function removeUrlAnchor(url){
+//     if (url.includes('#')) {
+//         console.log(url.slice(0, url.indexOf('#')));
+//         return url.slice(0, url.indexOf('#'))
+//     }
+//    console.log(url);
+//     return url;
+// }
+
+
+//  removeUrlAnchor('www.codewars.com#about') // 'www.codewars.com'
+// removeUrlAnchor('www.codewars.com/katas/') // 'www.codewars.com/katas/
+
+// 10.
+
+// const alwaysOdd = n => !(n % 2) ? n-1 : n;
+// console.log(alwaysOdd(1));
+
+//11.
+
+// function stray(numbers) {
+//    for (let i = 0; i < numbers.length; i++) {
+//        if (numbers[i] !== numbers[i + 1] && numbers[i] !== numbers[i + 2]) {
+//            console.log(numbers[i]);
+//            return numbers[i];
+//        }
+       
+//    }
+  
+// }
+
+
+function stray(numbers) {
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] !== numbers[i + 1] && numbers[i] !== numbers[i + 2]) {
+            console.log(numbers[i]);
+            return numbers[i];
+        }
+    }
 }
-pairZeros([1,0,1,0,2,0,0,3,0]) // [1,0,1,2,0,3,0]
+stray([1, 1, 2]) /// 2
