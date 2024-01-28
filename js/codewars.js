@@ -150,12 +150,28 @@
 // }
 
 
-function stray(numbers) {
-    for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i] !== numbers[i + 1] && numbers[i] !== numbers[i + 2]) {
-            console.log(numbers[i]);
-            return numbers[i];
-        }
-    }
+// function stray(numbers) {
+//     for (let i = 0; i < numbers.length; i++) {
+//         if (numbers[i] !== numbers[i + 1] && numbers[i] !== numbers[i + 2]) {
+//             console.log(numbers[i]);
+//             return numbers[i];
+//         }
+//     }
+// }
+// stray([1, 1, 2]) /// 2
+
+// 12.
+
+
+function maxTriSum(numbers) {
+    const sum = 0;
+    const arr = numbers.filter((el, idx) => numbers.indexOf(el) === idx).toSorted((a, b) => b - a).slice(0, 3);
+    
+    console.log(sum);
+    return sum
+
 }
-stray([1, 1, 2]) /// 2
+
+
+
+maxTriSum([-14, -12, -7, -42, -809, -14, -12])//-33
