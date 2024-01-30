@@ -163,15 +163,31 @@
 // 12.
 
 
-function maxTriSum(numbers) {
-    const sum = 0;
-    const arr = numbers.filter((el, idx) => numbers.indexOf(el) === idx).toSorted((a, b) => b - a).slice(0, 3);
-    
-    console.log(sum);
-    return sum
+// function maxTriSum(numbers) {
+//     let sum = 0;
+//     const arr = numbers.filter((el, idx) => numbers.indexOf(el) === idx).toSorted((a, b) => b - a).slice(0, 3);
+//     arr.forEach(el => {
+//         sum += el;
+//     });
+//     console.log(sum);
+//     return sum
 
-}
+// }
 
 
 
-maxTriSum([-14, -12, -7, -42, -809, -14, -12])//-33
+// maxTriSum([-14, -12, -7, -42, -809, -14, -12])//-33
+// maxTriSum([-7,12,-7,29,-5,0,-7,0,0,29])//41
+
+// function maxTriSum(numbers) {
+//     // Видалимо дубльовані елементи
+//     const uniqueNumbers = [...new Set(numbers)];
+
+//     // Відсортуємо у порядку спадання
+//     uniqueNumbers.sort((a, b) => b - a);
+
+//     // Виберемо перші три елементи та знайдемо їх суму
+//     return uniqueNumbers.slice(0, 3).reduce((sum, num) => sum + num, 0);
+
+// 13.
+
