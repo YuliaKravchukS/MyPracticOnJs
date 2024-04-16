@@ -8,7 +8,7 @@
   background-color: rgb(246, 232, 216);
   gap: 8px;
   border: 1px solid beige;
-  padding: 5px;
+  padding: 8px;
   border-radius: 15px;
 }
 .container {
@@ -19,7 +19,7 @@
 
 .display {
   margin: 0 0 15px;
-  padding: 0;
+  padding: 10px;
   width: 100%;
   height: 60px;
   text-align: end;
@@ -28,6 +28,7 @@
   background-color: darkgray;
   border: none;
   border-radius: 15px;
+  overflow: hidden;
 }
 .calculate {
   background-color: beige;
@@ -61,7 +62,10 @@
 
   box-shadow: inset 0px 1px 0px #d9eacc, 0px 6px 0px rgb(105, 133, 88);
 }
-.row_3 button:first-child,
+.row_3 button:first-child {
+  background-color: #f6d0a1;
+  box-shadow: inset 0px 1px 0px #d9eacc, 0px 6px 0px #9c866c;
+}
 .row_4 button:first-child {
   background-color: rgb(238, 15, 15);
   box-shadow: inset 0px 1px 0px #d9eacc, 0px 6px 0px rgb(187, 51, 51);
@@ -79,14 +83,10 @@
   border-radius: 50%;
   border: none;
   position: relative;
-  /* background-image: linear-gradient(
-    bottom,
-    rgb(100, 170, 30) 0%,
-    rgb(129, 212, 51) 100%
-  );
-  box-shadow: inset 0px 1px 0px #b2f17f, 0px 6px 0px #3d6f0d; */
 }
-.button:active {
+.button:active,
+.row_3 button:first-child:active,
+.row_4 button:first-child:active {
   top: 7px;
   background-image: linear-gradient(
     bottom,

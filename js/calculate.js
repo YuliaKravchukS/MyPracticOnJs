@@ -13,6 +13,13 @@ let sign = "";
 let finish = false;
 input.value = startValue;
 
+function clearAll() {
+  a = "";
+  b = "";
+  d = "";
+  sign = "";
+}
+
 const arrNumbers = [
   "00",
   "0",
@@ -28,8 +35,15 @@ const arrNumbers = [
   ".",
 ];
 const arrSign = ["/", "*", "+", "-", "√", "%"];
-const arrAddSign = ["MRC", "M-", "M+", "→", "CE", "AC"];
+const arrAddSign = ["MR", "M-", "M+", "→", "MC", "AC"];
 
+input.addEventListener("input", () => {
+  if (input.value.length > 12) {
+    input.value = input.value.slice(0, 12);
+    console.log(input.value.length);
+    return input.value;
+  }
+});
 calculate.addEventListener("click", onCalculateClick);
 
 function onCalculateClick(e) {
@@ -37,9 +51,15 @@ function onCalculateClick(e) {
   const key = e.target.textContent;
 
   if (key === "%") {
-    const percent = (parseFloat(a) * parseFloat(b)) / 100;
+    const percent = (a * b) / 100;
     input.value = percent;
-    b = percent.toString();
+    b = percent;
+    return;
+  }
+  if (key === "√") {
+    const sqrt = Math.sqrt(a);
+    input.value = sqrt;
+    a = sqrt;
     return;
   }
 
@@ -68,19 +88,21 @@ function onCalculateClick(e) {
   if (key === "=") {
     switch (sign) {
       case "/":
-        c = parseFloat(a) / parseFloat(b);
+        if (b === "0" || b === "00") {
+          input.value = "Error";
+          c = "";
+          return;
+        }
+        c = a / b;
         break;
       case "*":
-        c = parseFloat(a) * parseFloat(b);
+        c = a * b;
         break;
       case "-":
-        c = parseFloat(a) - parseFloat(b);
+        c = a - b;
         break;
       case "+":
-        c = parseFloat(a) + parseFloat(b);
-        break;
-      case "√":
-        c = Math.sqrt(parseFloat(a));
+        c = a + b;
         break;
     }
     a = c;
@@ -89,10 +111,13 @@ function onCalculateClick(e) {
   }
   if (arrAddSign.includes(key)) {
     switch (key) {
-      case "MRC":
+      case "MR":
         if (memory !== "") {
           input.value = memory;
-          memory = "";
+          a = memory;
+          b = "";
+        } else {
+          input.value = 0;
         }
         break;
       case "M-":
@@ -101,11 +126,7 @@ function onCalculateClick(e) {
         } else {
           memory = c;
         }
-        a = "";
-        b = "";
-        d = "";
-        sign = "";
-        console.log("M-", c, a, b);
+        clearAll();
         break;
       case "M+":
         if (memory !== "") {
@@ -113,23 +134,19 @@ function onCalculateClick(e) {
         } else {
           memory = c;
         }
-        a = "";
-        b = "";
-        d = "";
-        sign = "";
+        clearAll();
         break;
       case "→":
         input.value = input.value.slice(0, -1);
         break;
-      case "CE":
+      case "MC":
+        memory = "";
       case "AC":
         finish = false;
         input.value = startValue;
-        a = "";
-        b = "";
         c = "";
-        d = "";
-        sign = "";
+        clearAll();
+        memory = "";
         break;
     }
   }
