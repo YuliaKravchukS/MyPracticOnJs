@@ -5,13 +5,11 @@
 .keys {
   display: flex;
   flex-wrap: wrap;
-  width: 250px;
-  height: 350px;
+  background-color: rgb(246, 232, 216);
   gap: 8px;
-}
-
-.button {
-  width: calc((100% - 8px * 4) / 5);
+  border: 1px solid beige;
+  padding: 5px;
+  border-radius: 15px;
 }
 .container {
   padding: 15px;
@@ -27,4 +25,73 @@
   text-align: end;
   padding: 10px;
   font-size: 24px;
+  background-color: darkgray;
+  border: none;
+  border-radius: 15px;
+}
+.calculate {
+  background-color: beige;
+  width: 280px;
+  padding: 15px;
+  border: 1px solid darkgray;
+  border-radius: 15px;
+  box-shadow: 5px 5px 17px 3px #000000;
+}
+
+.color {
+  width: 250px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+.row_1 button {
+  background-color: #f6d0a1;
+
+  box-shadow: inset 0px 1px 0px #d9eacc, 0px 6px 0px #9c866c;
+}
+.row_2 button {
+  background-color: rgb(234, 234, 86);
+
+  box-shadow: inset 0px 1px 0px #d9eacc, 0px 6px 0px rgb(188, 188, 126);
+}
+.row_3 button {
+  background-color: rgb(175, 239, 138);
+
+  box-shadow: inset 0px 1px 0px #d9eacc, 0px 6px 0px rgb(105, 133, 88);
+}
+.row_3 button:first-child,
+.row_4 button:first-child {
+  background-color: rgb(238, 15, 15);
+  box-shadow: inset 0px 1px 0px #d9eacc, 0px 6px 0px rgb(187, 51, 51);
+}
+.row_4 button {
+  background-color: rgb(240, 168, 240);
+  box-shadow: inset 0px 1px 0px #d9eacc, 0px 6px 0px rgb(163, 128, 163);
+}
+.row_5 button {
+  background-color: rgb(138, 209, 239);
+  box-shadow: inset 0px 1px 0px #d9eacc, 0px 6px 0px rgb(110, 154, 172);
+}
+.button {
+  width: calc((100% - 8px * 4) / 5);
+  border-radius: 50%;
+  border: none;
+  position: relative;
+  /* background-image: linear-gradient(
+    bottom,
+    rgb(100, 170, 30) 0%,
+    rgb(129, 212, 51) 100%
+  );
+  box-shadow: inset 0px 1px 0px #b2f17f, 0px 6px 0px #3d6f0d; */
+}
+.button:active {
+  top: 7px;
+  background-image: linear-gradient(
+    bottom,
+    rgb(100, 170, 30) 100%,
+    rgb(129, 212, 51) 0%
+  );
+  box-shadow: inset 0px 1px 0px #b2f17f, inset 0px -1px 0px #3d6f0d;
 }
