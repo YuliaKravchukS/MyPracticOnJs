@@ -4,7 +4,6 @@
 //     console.log(numberArray);
 // }
 
-
 // console.log(digitize(35231));
 
 // 2.
@@ -18,29 +17,25 @@
 //     console.log(fixedArray);
 // }
 
-
 // pipeFix([6,9]) //[6,7,8,9])
 
 //3.
 
 // function oddCount(n){
 //     const arr = [];
-    
+
 //     for (let i = 0; i < n; i++) {
 //         if(i%2 !== 0) arr.push(i);
 //     }
-    
+
 //     console.log(arr.length);
 //     return arr.length;
-    
+
 // }
 
 // oddCount(15) //7 (because odd numbers below 15 are [1, 3, 5, 7, 9, 11, 13])
 
-
 //4.
-
-
 
 // function accum(s) {
 //     const arr = s.toUpperCase().split('');
@@ -64,7 +59,6 @@
 
 // accum("ZpglnRxqenU") //"Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu"
 
-
 // 5.
 
 // function add(n) {
@@ -76,7 +70,6 @@
 // }
 
 // 6.
-
 
 // function averages(numbers) {
 //     const averagesNumbArr = [];
@@ -91,7 +84,6 @@
 //     console.log(averagesNumbArr);
 //         return averagesNumbArr;
 // }
-
 
 // averages([1, 3, 5, 1, -10]) //[2, 4, 3, -4.5]
 
@@ -115,7 +107,6 @@
 
 // removeDuplicateWords('alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta') //'alpha beta gamma delta'
 
-
 // 9.
 
 // function removeUrlAnchor(url){
@@ -126,7 +117,6 @@
 //    console.log(url);
 //     return url;
 // }
-
 
 //  removeUrlAnchor('www.codewars.com#about') // 'www.codewars.com'
 // removeUrlAnchor('www.codewars.com/katas/') // 'www.codewars.com/katas/
@@ -144,11 +134,10 @@
 //            console.log(numbers[i]);
 //            return numbers[i];
 //        }
-       
-//    }
-  
-// }
 
+//    }
+
+// }
 
 // function stray(numbers) {
 //     for (let i = 0; i < numbers.length; i++) {
@@ -162,7 +151,6 @@
 
 // 12.
 
-
 // function maxTriSum(numbers) {
 //     let sum = 0;
 //     const arr = numbers.filter((el, idx) => numbers.indexOf(el) === idx).toSorted((a, b) => b - a).slice(0, 3);
@@ -173,8 +161,6 @@
 //     return sum
 
 // }
-
-
 
 // maxTriSum([-14, -12, -7, -42, -809, -14, -12])//-33
 // maxTriSum([-7,12,-7,29,-5,0,-7,0,0,29])//41
@@ -194,8 +180,7 @@
 // function findPath(mountain) {
 //     const row = mountain.length;
 //     const columns = mountain[0].length;
-    
-    
+
 //     //const newArray = mountain.slice();
 //     const newArray = [];
 //     for (let i = 0; i < row; i++) {
@@ -207,7 +192,7 @@
 //             let down = newArray[i + 1][j];
 //             let left = j > 0 ? newArray[i + 1][j - 1] : 0;
 //             let right = j < columns - 1 ? newArray[i + 1][j + 1] : 0;
-                      
+
 //             let maxNumberInRow = Math.max(down, left, right);
 //             console.log('Math.max(down, left, right);: ', Math.max(down, left, right))
 //             newArray[i][j] += maxNumberInRow;
@@ -240,9 +225,6 @@
 //     return dp[0][0];
 // }
 
-
-
-
 //findPath([[6], [7, 10], [12, 11, 9], [90, 25, 13, 14]]) // 115
 //findPath([[0], [0, 0], [0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 70], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]])//70//
 //findPath([[3], [7, 4], [2, 4, 6], [8, 5, 9, 3]]) //23
@@ -251,4 +233,28 @@
 //findPath([[90],[60,9],[50,23,66],[57,97,72,26],[73,77,92,97,79],[97,71,1,94,45,86],[25,72,89,34,28,54,7],[11,32,79,42,6,38,34,69],[84,89,84,22,19,53,15,83,16],[48,10,5,68,57,54,50,35,49,76]])//765
 //findPath([[2],[7,53],[5,39,60],[15,81,47,67],[44,72,89,67,69],[11,35,61,28,91,8],[81,92,45,8,19,31,65],[2,61,43,43,65,34,71,56],[42,50,88,37,55,46,32,4,50],[62,42,59,12,29,40,35,15,77,7],[60,13,18,16,91,96,73,68,13,26,83],[80,64,73,49,80,43,34,59,20,47,54,53],[94,76,68,40,75,48,67,15,35,16,92,77,33],[5,46,49,15,77,7,97,41,36,5,75,45,79,49],[91,77,99,32,13,38,54,0,45,56,2,46,33,34,82],[51,81,22,71,59,42,3,18,36,9,24,21,30,49,0,84],[46,64,49,57,52,60,97,58,73,24,78,53,74,63,6,88,58],[73,29,29,73,23,34,94,82,20,98,19,46,17,85,55,87,22,39],[93,78,51,8,59,79,13,83,67,21,73,41,41,47,78,12,93,40,5],[8,70,91,12,9,76,21,30,92,35,28,14,14,53,28,32,90,67,87,10],[21,29,56,2,41,4,85,80,12,18,39,85,77,69,59,36,65,91,21,33,64],[28,81,78,63,1,73,53,20,11,5,86,13,79,75,18,27,73,57,35,73,86,8],[99,71,74,18,53,55,32,84,36,81,3,23,50,34,32,4,96,10,5,35,86,84,71],[63,51,1,83,87,26,3,41,55,81,59,0,97,54,53,55,43,70,5,69,2,61,21,86],[2,76,84,36,66,97,29,73,72,79,43,39,82,66,67,26,82,96,33,49,63,18,60,57,4],[26,5,97,77,49,36,63,40,25,10,74,51,95,66,80,63,27,47,10,96,98,79,40,85,87,12],[86,42,45,31,44,71,47,48,46,28,31,1,31,61,5,17,99,73,3,98,56,30,19,98,94,59,67],[55,49,9,27,19,27,23,54,97,86,94,18,23,81,95,0,98,87,81,36,60,30,28,20,35,18,52,23],[62,65,9,43,77,80,60,32,82,72,49,12,88,61,29,8,73,67,77,3,52,1,73,33,83,68,88,76,96],[40,86,8,15,21,61,9,91,95,71,60,2,29,34,42,73,30,96,30,70,18,67,39,73,57,97,13,21,66,14]]) //74134
 
+// Please write a program that generates a list of 10,000 numbers in random order each time it is run. Each number in the list must be unique and be between 1 and 10,000 (inclusive).
+//
+const list = document.querySelector("#list");
+let arrNumb = [];
+let arrRandomNumb = [];
+for (let i = 1; i <= 10; i++) {
+  arrNumb.push(i);
+}
+function shuffledArray() {
+  while (arrNumb.length > 1) {
+    const idx = Math.floor(Math.random() * arrNumb.length);
+    arrRandomNumb.push(arrNumb[idx]);
+    arrNumb.splice(idx, 1);
+  }
+}
 
+function randomNumber() {
+  //   shuffledArray();
+  //   arrRandomNumb.forEach((el) => {
+  //     const item = document.createElement("li");
+  //     item.textContent = el;
+  //     list.append(item);
+  //   });
+}
+randomNumber();

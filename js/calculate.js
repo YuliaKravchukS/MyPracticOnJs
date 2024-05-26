@@ -137,7 +137,8 @@ function onCalculateClick(e) {
         clearAll();
         break;
       case "→":
-        input.value = input.value.slice(0, -1);
+        a = input.value.slice(0, -1);
+        input.value = a;
         break;
       case "MC":
         memory = "";
