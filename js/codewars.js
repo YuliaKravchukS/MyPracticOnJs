@@ -284,7 +284,7 @@
 //     } else {
 //       leftPart = el.slice(0, el.length / 2);
 //       rightPart = el.slice(el.length / 2);
-//     }
+//     },
 //     return `${leftPart}|${rightPart}`;
 //   });
 // }
@@ -292,3 +292,68 @@
 // isolateIt(["abcd", "efgh"]); //, ["ab|cd","ef|gh"]);
 // isolateIt(["abcde", "fghij"]); //, ["ab|de","fg|ij"]);
 // isolateIt(["1234", "56789"]); //, ["12|34","56|89"]);
+
+// function barTriang(p1, p2, p3) {
+//   const x = ((p1[0] + p2[0] + p3[0]) / 3).toFixed(4);
+//   const y = ((p1[1] + p2[1] + p3[1]) / 3).toFixed(4);
+//   let coordinates = [];
+//   coordinates.push(x.toString(), y.toString());
+//   console.log(coordinates);
+//   return coordinates;
+// }
+
+// barTriang([4, 6], [12, 4], [10, 10]); // [8.6667, 6.6667];
+
+// const flip = (d, a) => {
+//   if (d === "R") {
+//     a.sort((c, b) => c - b);
+//   } else {
+//     a.sort((c, b) => b - c);
+//   }
+
+//   return a;
+// };
+
+// flip("R", [3, 2, 1, 2]); //, [1, 2, 2, 3]);
+// flip("L", [1, 4, 5, 3, 5]); ///, [5, 5, 4, 3, 1]);
+
+// function fakeBin(x) {
+//   let str = "";
+//   for (let i = 0; i < x.length; i++) {
+//     if (x[i] < 5) {
+//       str += 0;
+//     } else {
+//       str += 1;
+//     }
+//   }
+//   console.log(str);
+//   return str;
+// }
+
+// fakeBin("45385593107843568"); //, '01011110001100111')
+
+// function smash(words) {
+//   return words.join(" ");
+// }
+
+// smash(["this", "is", "a", "really", "long", "sentence"]); //, "this is a really long sentence")
+
+// function arrayPlusArray(arr1, arr2) {
+//   const sum = [...arr1, ...arr2].reduce((acc, el) => acc + el, 0);
+//   console.log("sum: ", sum);
+
+//   return sum; //something went wrong
+// }
+
+// arrayPlusArray([-1, -2, -3], [-4, -5, -6]); //, -21)
+
+function differenceInAges(ages) {
+  let newArray = [];
+  const agesSorted = ages.sort((a, b) => a - b);
+  const dif = agesSorted[agesSorted.length - 1] - agesSorted[0];
+  newArray.push(agesSorted[0], agesSorted[agesSorted.length - 1], dif);
+  console.log("newArray: ", newArray);
+  return newArray;
+}
+
+differenceInAges([57, 99, 14, 32]); //, [14, 99, 85];
